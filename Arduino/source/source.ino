@@ -15,7 +15,7 @@ void loop()
     distance = random(80,100); //Replace me!
 
     format(angle,distance);
-    delay(1);
+    delay(10);
   }
 
   angle = 0;
