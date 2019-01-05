@@ -52,11 +52,14 @@ void draw() {
     text(angle_float, 10, 100);
     text("If it fits it ships", 10, 150);
 
-    //while (angle_float <= 360)
-    //{
-      rect(botX - botSize / 2, botY - botSize / 2, botSize, botSize);
-      line(botX + botSize / botSize, botY + botSize / botSize, plotX + botX, plotY + botY);
-      ellipse(plotX + botX, plotY + botY, 3,3);
-    //}
+    rect(botX - botSize / 2, botY - botSize / 2, botSize, botSize);
+    line(botX + botSize / botSize, botY + botSize / botSize, plotX + botX, plotY + botY);
+    ellipse(plotX + botX, plotY + botY, 3, 3);
+    persist();
   }
+}
+
+void persist()
+{
+  ellipse(plotX + botX, plotY + botY, 3, 3);
 }
