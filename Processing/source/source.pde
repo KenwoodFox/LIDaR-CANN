@@ -1,6 +1,6 @@
 import processing.serial.*;
 
-boolean simulate = true;
+boolean simulate = false;
 
 void setup() {
   size(800, 500);
@@ -25,8 +25,7 @@ void draw() {
       plotX = (distance_float / zoom )* cos(radians(angle_float));
       plotY = (distance_float / zoom )* sin(radians(angle_float));
     }
-  } 
-  else
+  } else
   {
     plotX = (distance_arb / zoom )* cos(radians(simulate()));
     plotY = (distance_arb / zoom )* sin(radians(simulate()));
@@ -39,13 +38,12 @@ void draw() {
     text(distance_float, 10, 50);
     text(angle_float, 10, 100);
     text("If it fits it ships", 10, 150);
-    if(simulate == true)
+    if (simulate == true)
     {
-    text("Simulation is ENABLED", 190, 150);
-    }
-    else
+      text("Simulation is ENABLED", 10, 200);
+    } else
     {
-      text("Simulation is DISABLED", 190, 150);
+      text("Simulation is DISABLED", 10, 200);
     }
 
     rect(botX - botSize / 2, botY - botSize / 2, botSize, botSize);
